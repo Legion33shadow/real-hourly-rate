@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Calculate your true hourly rate after commute, unpaid overtime, taxes and work expenses. Most people earn 30-50% less than they think. Updated 2026-04-28.">
+<meta name="keywords" content="real hourly rate calculator 2026, true hourly wage after expenses, actual hourly rate after commute, what do i really earn per hour, hidden cost of employment calculator">
+<meta property="og:title" content="Real Hourly Rate Calculator 2026 — What Do You Actually Earn?">
+<meta property="og:description" content="Calculate your true hourly rate after commute, unpaid overtime, taxes and work expenses. Most people earn 30-50% less than they think. Updated 2026-04-28.">
+<meta property="og:type" content="website">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://legion33shadow.github.io/real-hourly-rate/">
+<title>Real Hourly Rate Calculator 2026 — What Do You Actually Earn?</title>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5382997898313669" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Real Hourly Rate Calculator 2026", "url": "https://legion33shadow.github.io/real-hourly-rate/", "description": "Calculate your true hourly rate after all hidden costs: commute, unpaid overtime, work expenses, taxes. What do you actually earn per hour?", "applicationCategory": "FinanceApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "inLanguage": "en", "dateModified": "2026-04-28"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is my real hourly rate lower than my salary suggests?", "acceptedAnswer": {"@type": "Answer", "text": "Your nominal salary is calculated on contracted hours. But most workers spend additional unpaid time: commuting (average 50 min/day), overtime, lunch breaks, getting ready for work. Add work expenses like transport, clothing, and takeout lunches — your real hourly rate can be 30-50% lower than you think."}}, {"@type": "Question", "name": "How do I calculate my real hourly rate?", "acceptedAnswer": {"@type": "Answer", "text": "Formula: Real hourly rate = (Annual net salary — Work expenses) ÷ (Contracted hours + Commute hours + Unpaid overtime + Work preparation time) × 52 weeks. This gives the actual value of one hour of your life spent on work."}}, {"@type": "Question", "name": "What counts as work-related expenses?", "acceptedAnswer": {"@type": "Answer", "text": "Transport (car, train, bus), work clothing and dry cleaning, lunches at work, coffee, childcare needed because of work, professional tools, subscriptions, and any equipment you buy for work that isn't reimbursed."}}, {"@type": "Question", "name": "How can I use my real hourly rate?", "acceptedAnswer": {"@type": "Answer", "text": "Use it to evaluate purchases: if something costs $200 and your real rate is $15/hour, that item cost you 13 hours of your life. Also use it to negotiate salary, evaluate freelance rates, or decide whether a promotion is worth the extra stress."}}]}</script>
+<style>
+:root{--p:#1d4ed8;--d:#1e40af;--bg:#f1f5f9;--card:#fff;
+      --t:#0f172a;--s:#64748b;--g:#16a34a;--r:#dc2626}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,-apple-system,sans-serif;
+     background:var(--bg);color:var(--t);line-height:1.7}
+header{background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 100%);
+       color:#fff;padding:2.2rem 1rem;text-align:center}
+header .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+            opacity:.65;margin-bottom:.5rem}
+header h1{font-size:1.55rem;font-weight:800;line-height:1.3;margin-bottom:.4rem}
+header p{opacity:.88;font-size:.93rem;max-width:640px;margin:0 auto}
+nav.crumb{background:#fff;padding:.45rem 1rem;font-size:.78rem;
+          color:var(--s);border-bottom:1px solid #e2e8f0}
+nav.crumb a{color:var(--p);text-decoration:none}
+.container{max-width:800px;margin:0 auto;padding:1rem}
+.card{background:var(--card);border-radius:16px;padding:1.6rem;
+      box-shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
+      margin-bottom:1.4rem;border:1px solid #f1f5f9}
+.card h2{color:var(--p);font-size:1.1rem;font-weight:700;
+         margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.card h3{color:var(--d);font-size:.96rem;font-weight:600;
+         margin:1rem 0 .4rem}
+.card p{color:#475569;font-size:.91rem;margin-bottom:.65rem}
+.card ul{padding-left:1.15rem;color:#475569;font-size:.91rem}
+.card li{margin-bottom:.35rem}
+label{display:block;font-size:.81rem;color:var(--s);
+      font-weight:600;margin:.75rem 0 .25rem;letter-spacing:.01em}
+input,select{width:100%;padding:.72rem .85rem;border:1.5px solid #e2e8f0;
+             border-radius:10px;font-size:.96rem;background:#fff;
+             color:var(--t);transition:.2s}
+input:focus,select:focus{outline:none;border-color:var(--p);
+  box-shadow:0 0 0 3px rgba(29,78,216,.12)}
+input[readonly]{background:#f8fafc;color:var(--s);cursor:not-allowed}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.9rem}
+button.calc{width:100%;padding:.82rem;background:var(--p);color:#fff;
+            border:none;border-radius:10px;font-size:.97rem;font-weight:700;
+            cursor:pointer;margin-top:.9rem;letter-spacing:.02em;
+            transition:.2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
+button.calc:hover{background:var(--d);transform:translateY(-1px);
+  box-shadow:0 4px 16px rgba(29,78,216,.28)}
+.result{background:linear-gradient(135deg,#eff6ff,#f0fdf4);
+        border:1.5px solid #bfdbfe;border-radius:12px;
+        padding:1.2rem;margin-top:1rem;display:none}
+.result.show{display:block}
+.result-hero{font-size:2.2rem;font-weight:800;color:var(--p);line-height:1}
+.result-sub{font-size:.78rem;color:var(--s);margin-top:.2rem}
+.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.9rem}
+.result-item{background:#fff;border-radius:8px;padding:.55rem .75rem;
+             border:1px solid #e2e8f0}
+.result-item .k{font-size:.74rem;color:var(--s)}
+.result-item .v{font-size:.97rem;font-weight:700;color:var(--t)}
+.result-item.good .v{color:var(--g)}
+.result-item.bad  .v{color:var(--r)}
+.result-item.warn .v{color:#d97706}
+.ads{text-align:center;margin:1.1rem 0}
+.tip{background:#f0fdf4;border-left:3px solid var(--g);border-radius:0 8px 8px 0;
+     padding:.75rem 1rem;margin:.7rem 0;font-size:.86rem;color:#166534}
+.warn{background:#fefce8;border-left:3px solid #ca8a04;border-radius:0 8px 8px 0;
+      padding:.75rem 1rem;margin:.7rem 0;font-size:.86rem;color:#92400e}
+.alert{background:#fef2f2;border-left:3px solid var(--r);
+       border-radius:0 8px 8px 0;padding:.75rem 1rem;
+       margin:.7rem 0;font-size:.86rem;color:#991b1b}
+.tbl{width:100%;border-collapse:collapse;font-size:.86rem;margin:.7rem 0}
+.tbl th{background:#dbeafe;color:var(--d);padding:.45rem .7rem;text-align:left;
+        font-weight:600}
+.tbl td{padding:.42rem .7rem;border-bottom:1px solid #f1f5f9;color:#334155}
+.tbl tr:last-child td{border-bottom:none}
+.tbl .g{color:var(--g);font-weight:600}
+.tbl .r{color:var(--r)}
+.tbl .b{color:var(--p);font-weight:700}
+.badge{background:#dbeafe;color:var(--d);padding:.12rem .45rem;
+       border-radius:5px;font-size:.73rem;font-weight:700;margin-left:.35rem}
+.badge.green{background:#dcfce7;color:#166534}
+.badge.orange{background:#fef3c7;color:#92400e}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0}
+.pills a{background:#f1f5f9;color:var(--p);padding:.25rem .65rem;
+         border-radius:20px;font-size:.78rem;text-decoration:none;
+         border:1px solid #cbd5e1;transition:.15s}
+.pills a:hover{background:var(--p);color:#fff;border-color:var(--p)}
+.faq-item{border-bottom:1px solid #f1f5f9;padding:.75rem 0}
+.faq-item:last-child{border-bottom:none}
+.faq-q{font-weight:600;color:var(--t);cursor:pointer;font-size:.92rem;
+        display:flex;justify-content:space-between;align-items:center;gap:.5rem}
+.faq-q::after{content:"＋";color:var(--p);flex-shrink:0}
+.faq-item.open .faq-q::after{content:"－"}
+.faq-a{display:none;padding-top:.5rem;color:#475569;font-size:.88rem;line-height:1.65}
+.faq-item.open .faq-a{display:block}
+.disclaimer{background:#fefce8;border:1px solid #fde68a;border-radius:10px;padding:1rem}
+footer{text-align:center;padding:2rem 1rem;color:var(--s);font-size:.78rem;
+       border-top:1px solid #e2e8f0;margin-top:2rem}
+.progress-bar{height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden;margin-top:.4rem}
+.progress-fill{height:100%;border-radius:4px;transition:width .5s}
+@media(max-width:540px){
+  .row2,.row3{grid-template-columns:1fr}
+  header h1{font-size:1.2rem}
+  .result-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="tag">🌍 Global · Updated 2026</div>
+  <h1>⏱️ Real Hourly Rate Calculator</h1>
+  <p>What do you <em>actually</em> earn per hour — after commute,
+  unpaid overtime, taxes and hidden work costs?
+  Most people are shocked by the result.</p>
+</header>
+<nav class="crumb"><a href="./">Home</a> › Real Hourly Rate Calculator</nav>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div class="container">
+
+<!-- ── MAIN TOOL ─────────────────────────────────────────── -->
+<div class="card" id="real-rate-calc">
+  <h2>⏱️ True Hourly Rate Calculator
+    <span class="badge">Revealing</span></h2>
+
+  <div class="warn" style="margin-bottom:1rem">
+    🧠 <strong>Most people overestimate their hourly rate by 40%.</strong>
+    Fill in your real situation below.
+  </div>
+
+  <h3>💰 Income</h3>
+  <div class="row2">
+    <div>
+      <label>Annual gross salary</label>
+      <input type="number" id="rh_gross" placeholder="50000" min="0"
+             oninput="estimateTax()">
+    </div>
+    <div>
+      <label>Annual net salary (after tax)</label>
+      <input type="number" id="rh_net" placeholder="38000" min="0">
+    </div>
+  </div>
+  <div style="font-size:.78rem;color:var(--s);margin-top:.2rem" id="rh_tax_hint"></div>
+
+  <h3 style="margin-top:1rem">⏰ Time Invested</h3>
+  <div class="row2">
+    <div>
+      <label>Contracted hours per week</label>
+      <input type="number" id="rh_contract" value="40" min="1" max="80">
+    </div>
+    <div>
+      <label>Actual hours worked per week (incl. overtime)</label>
+      <input type="number" id="rh_actual" value="45" min="1" max="100">
+    </div>
+  </div>
+  <div class="row2">
+    <div>
+      <label>Daily commute (minutes one way)</label>
+      <input type="number" id="rh_commute" value="30" min="0" max="180">
+    </div>
+    <div>
+      <label>Daily work prep time (getting ready, etc.)</label>
+      <input type="number" id="rh_prep" value="20" min="0" max="120">
+    </div>
+  </div>
+
+  <h3 style="margin-top:1rem">💸 Annual Work Expenses</h3>
+  <div class="row2">
+    <div>
+      <label>Transport / commute cost / year</label>
+      <input type="number" id="rh_transport" placeholder="1200" min="0" value="0">
+    </div>
+    <div>
+      <label>Work lunches / year</label>
+      <input type="number" id="rh_lunch" placeholder="800" min="0" value="0">
+    </div>
+  </div>
+  <div class="row2">
+    <div>
+      <label>Work clothing / year</label>
+      <input type="number" id="rh_clothing" placeholder="300" min="0" value="0">
+    </div>
+    <div>
+      <label>Other work expenses / year</label>
+      <input type="number" id="rh_other" placeholder="200" min="0" value="0">
+    </div>
+  </div>
+
+  <button class="calc" onclick="calcRealHourly()">
+    ▶ Reveal my real hourly rate
+  </button>
+
+  <div class="result" id="res_rh">
+    <div class="row2">
+      <div>
+        <div style="font-size:.78rem;color:var(--s)">Your NOMINAL rate</div>
+        <div style="font-size:1.5rem;font-weight:700;color:var(--s);
+                    text-decoration:line-through" id="rh_nominal">€ —</div>
+      </div>
+      <div>
+        <div style="font-size:.78rem;color:var(--p)">Your REAL rate</div>
+        <div class="result-hero" id="rh_real">€ —</div>
+      </div>
+    </div>
+    <div class="result-grid" id="rh_grid" style="margin-top:1rem"></div>
+    <div id="rh_insight" style="margin-top:.9rem"></div>
+  </div>
+</div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<!-- ── LIFE COST TOOL ─────────────────────────────────────── -->
+<div class="card" id="life-cost">
+  <h2>🛒 True Cost of a Purchase
+    <span class="badge">Mind-blowing</span></h2>
+  <p style="font-size:.88rem;color:#475569">
+    How many hours of your life does a purchase actually cost?
+  </p>
+  <div class="row2">
+    <div>
+      <label>Item price</label>
+      <input type="number" id="lc_price" placeholder="500" min="0">
+    </div>
+    <div>
+      <label>Your real hourly rate (auto-filled)</label>
+      <input type="number" id="lc_rate" placeholder="15.50" min="0" step="0.01">
+    </div>
+  </div>
+  <button class="calc" onclick="calcLifeCost()">▶ Calculate life cost</button>
+  <div class="result" id="res_lc">
+    <div class="result-hero" id="lc_hours">— hours</div>
+    <div class="result-sub">of your life to buy this item</div>
+    <div class="result-grid" id="lc_grid" style="margin-top:.9rem"></div>
+    <div id="lc_context" style="margin-top:.8rem"></div>
+  </div>
+</div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<!-- ── SEO CONTENT ────────────────────────────────────────── -->
+<div class="card">
+  <h2>📘 Why Your Real Hourly Rate Matters</h2>
+
+  <p>Most salary discussions focus on the <strong>nominal hourly rate</strong>
+  — your annual salary divided by contracted hours. But this number
+  is almost always a <em>fiction</em>.</p>
+
+  <h3>The Hidden Time Tax</h3>
+  <p>A typical office worker in Europe or North America adds
+  significant unpaid time to their work week:</p>
+
+  <table class="tbl">
+    <tr><th>Hidden Time</th><th>Typical Duration</th><th>Weekly Total</th></tr>
+    <tr><td>Commute (both ways)</td><td>50 min/day</td><td class="r">4.2 h</td></tr>
+    <tr><td>Unpaid overtime</td><td>5-10 h/week</td><td class="r">7.5 h</td></tr>
+    <tr><td>Getting ready</td><td>20 min/day</td><td class="r">1.7 h</td></tr>
+    <tr><td>Decompression time</td><td>30 min/day</td><td class="r">2.5 h</td></tr>
+    <tr><td><strong>Total hidden</strong></td><td></td>
+        <td class="b"><strong>~16 hours/week</strong></td></tr>
+  </table>
+
+  <p style="margin-top:.8rem">That means a "40-hour job" can easily
+  consume <strong>56 hours of your life per week</strong>.
+  Your real hourly rate is therefore 28% lower — before expenses.</p>
+
+  <h3>The Hidden Cost Tax</h3>
+  <p>Work creates costs that wouldn't exist without the job:</p>
+  <ul>
+    <li><strong>Transport:</strong> car payments, fuel, train tickets</li>
+    <li><strong>Food:</strong> lunches, coffees, convenience meals
+    because you're too tired to cook</li>
+    <li><strong>Clothing:</strong> work wardrobe, dry cleaning</li>
+    <li><strong>Childcare:</strong> needed specifically for work hours</li>
+    <li><strong>Stress relief:</strong> gym, subscriptions,
+    weekend escapes to recover</li>
+  </ul>
+
+  <div class="alert">
+    🔥 <strong>Real-world example:</strong> €50.000 gross salary →
+    €36.000 net → minus €4.800 work expenses = €31.200.
+    Contracted 40h/week, but real work-related time = 55h.
+    <strong>Real rate: €31.200 ÷ (55 × 52) = €10.91/hour.</strong>
+    Nominal rate was €24.04. That's a <strong>55% overestimate.</strong>
+  </div>
+
+  <h3>How to Use This Insight</h3>
+  <ul>
+    <li>Evaluate whether a salary raise is really worth the extra stress</li>
+    <li>Calculate if a part-time option is financially viable</li>
+    <li>Set freelance rates that actually pay you fairly</li>
+    <li>Make intentional spending decisions ("this costs me 8 hours of life")</li>
+  </ul>
+</div>
+
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<div class="card">
+  <h2>❓ Frequently Asked Questions</h2>
+  <div class="faq-item"><div class="faq-q" onclick="fq(this)">Why is my real hourly rate lower than my salary suggests?</div><div class="faq-a">Your nominal salary is calculated on contracted hours. But most workers spend additional unpaid time: commuting (average 50 min/day), overtime, lunch breaks, getting ready for work. Add work expenses like transport, clothing, and takeout lunches — your real hourly rate can be 30-50% lower than you think.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="fq(this)">How do I calculate my real hourly rate?</div><div class="faq-a">Formula: Real hourly rate = (Annual net salary — Work expenses) ÷ (Contracted hours + Commute hours + Unpaid overtime + Work preparation time) × 52 weeks. This gives the actual value of one hour of your life spent on work.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="fq(this)">What counts as work-related expenses?</div><div class="faq-a">Transport (car, train, bus), work clothing and dry cleaning, lunches at work, coffee, childcare needed because of work, professional tools, subscriptions, and any equipment you buy for work that isn't reimbursed.</div></div>
+<div class="faq-item"><div class="faq-q" onclick="fq(this)">How can I use my real hourly rate?</div><div class="faq-a">Use it to evaluate purchases: if something costs $200 and your real rate is $15/hour, that item cost you 13 hours of your life. Also use it to negotiate salary, evaluate freelance rates, or decide whether a promotion is worth the extra stress.</div></div>
+
+</div>
+
+<div class="card">
+  <h2>🔗 Related Calculators</h2>
+  <div class="pills">
+    <a href="#real-rate-calc">⏱️ Real Hourly Rate</a>
+    <a href="#life-cost">🛒 Life Cost</a>
+    <a href="../tax-calculator-nl/">🇳🇱 NL Tax</a>
+    <a href="../tax-calculator-no/">🇳🇴 NO Tax</a>
+    <a href="../tax-calculator-se/">🇸🇪 SE Tax</a>
+  </div>
+</div>
+
+<div class="card disclaimer">
+  <h2 style="color:#92400e">📌 Disclaimer</h2>
+  <p style="color:#78350f;font-size:.86rem">
+    This calculator provides estimates based on your inputs.
+    Tax estimates use simplified brackets and may vary by country
+    and individual circumstances. Last updated: 2026-04-28.
+  </p>
+</div>
+</div>
+<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
+
+<footer>
+  <p>© 2026 Real Hourly Rate Calculator · Free financial tool</p>
+  <p style="margin-top:.3rem">
+    <a href="#real-rate-calc" style="color:var(--p);font-size:.78rem">
+    Real Rate</a> ·
+    <a href="#life-cost" style="color:var(--p);font-size:.78rem">
+    Life Cost</a>
+  </p>
+</footer>
+
+<script>
+function estimateTax() {
+  var g = parseFloat(document.getElementById('rh_gross').value) || 0;
+  if (g > 0) {
+    var est = Math.round(g * 0.28); // rough ~28% effective for EU average
+    var net = g - est;
+    document.getElementById('rh_net').value = net;
+    document.getElementById('rh_tax_hint').textContent =
+      'Auto-estimated net: ' + net.toLocaleString() +
+      ' (adjust if you know your actual net salary)';
+  }
+}
+
+function calcRealHourly() {
+  var gross    = parseFloat(document.getElementById('rh_gross').value) || 0;
+  var net      = parseFloat(document.getElementById('rh_net').value)   || gross * 0.72;
+  var contract = parseFloat(document.getElementById('rh_contract').value) || 40;
+  var actual   = parseFloat(document.getElementById('rh_actual').value)   || 40;
+  var commute  = parseFloat(document.getElementById('rh_commute').value)  || 0;
+  var prep     = parseFloat(document.getElementById('rh_prep').value)     || 0;
+  var transport= parseFloat(document.getElementById('rh_transport').value)|| 0;
+  var lunch    = parseFloat(document.getElementById('rh_lunch').value)    || 0;
+  var clothing = parseFloat(document.getElementById('rh_clothing').value) || 0;
+  var other    = parseFloat(document.getElementById('rh_other').value)    || 0;
+
+  var totalExpenses = transport + lunch + clothing + other;
+  var realIncome    = net - totalExpenses;
+
+  // Weekly hours: actual work + commute×2×5days/60 + prep×5/60
+  var commuteWeekly = (commute * 2 * 5) / 60;
+  var prepWeekly    = (prep * 5) / 60;
+  var totalWeekly   = actual + commuteWeekly + prepWeekly;
+  var totalAnnualH  = totalWeekly * 52;
+
+  var nominalRate = net / (contract * 52);
+  var realRate    = realIncome / totalAnnualH;
+  var drop        = Math.round((1 - realRate / nominalRate) * 100);
+
+  var f2 = function(v) { return '€ ' + v.toFixed(2); };
+  var f0 = function(v) { return '€ ' + Math.round(v).toLocaleString(); };
+
+  document.getElementById('rh_nominal').textContent = f2(nominalRate) + '/hr';
+  document.getElementById('rh_real').textContent    = f2(realRate) + '/hr';
+
+  document.getElementById('rh_grid').innerHTML = [
+    ['Net income', f0(net), ''],
+    ['Work expenses/yr', f0(totalExpenses), 'bad'],
+    ['Real income', f0(realIncome), 'good'],
+    ['Contracted hrs/yr', Math.round(contract * 52) + ' h', ''],
+    ['Real time/yr', Math.round(totalAnnualH) + ' h', 'bad'],
+    ['Rate drop vs nominal', drop + '%', 'bad'],
+  ].map(function(r) {
+    return '<div class="result-item ' + r[2] + '">'
+      + '<div class="k">' + r[0] + '</div>'
+      + '<div class="v">' + r[1] + '</div></div>';
+  }).join('');
+
+  var insight = '';
+  if (drop > 40) {
+    insight = '<div class="alert">🔥 <strong>Your real rate is '
+      + drop + '% lower than nominal.</strong> '
+      + 'A major discrepancy — consider negotiating, reducing expenses, '
+      + 'or evaluating remote work options.</div>';
+  } else if (drop > 20) {
+    insight = '<div class="warn">⚠️ Your real rate is <strong>' + drop
+      + '% below nominal</strong>. Common for urban workers. '
+      + 'Reducing commute time would have the biggest impact.</div>';
+  } else {
+    insight = '<div class="tip">✅ Your real rate is relatively close '
+      + 'to nominal (' + drop + '% gap). You have an efficient work setup.</div>';
+  }
+  document.getElementById('rh_insight').innerHTML = insight;
+  document.getElementById('res_rh').className = 'result show';
+
+  // Pre-fill life cost tool
+  document.getElementById('lc_rate').value = realRate.toFixed(2);
+}
+
+function calcLifeCost() {
+  var price = parseFloat(document.getElementById('lc_price').value) || 0;
+  var rate  = parseFloat(document.getElementById('lc_rate').value)  || 1;
+  var hours = price / rate;
+  var days  = hours / 8;
+  var weeks = hours / 40;
+
+  document.getElementById('lc_hours').textContent =
+    hours.toFixed(1) + ' hours';
+  document.getElementById('lc_grid').innerHTML = [
+    ['Price', '€ ' + price.toLocaleString(), ''],
+    ['Your real rate', '€ ' + rate.toFixed(2) + '/hr', ''],
+    ['= Work hours', hours.toFixed(1) + ' h', 'bad'],
+    ['= Work days', days.toFixed(1) + ' days', 'bad'],
+  ].map(function(r) {
+    return '<div class="result-item ' + r[2] + '">'
+      + '<div class="k">' + r[0] + '</div>'
+      + '<div class="v">' + r[1] + '</div></div>';
+  }).join('');
+
+  var ctx = '';
+  if (hours < 1) {
+    ctx = '<div class="tip">✅ Costs less than 1 hour. Reasonable.</div>';
+  } else if (hours < 8) {
+    ctx = '<div class="tip">⏰ About ' + hours.toFixed(1)
+      + ' hours of work. Think if it is worth it.</div>';
+  } else {
+    ctx = '<div class="alert">🔥 This costs you <strong>'
+      + days.toFixed(1) + ' full work days</strong>. '
+      + 'Consider carefully.</div>';
+  }
+  document.getElementById('lc_context').innerHTML = ctx;
+  document.getElementById('res_lc').className = 'result show';
+}
+
+function fq(el) { el.parentElement.classList.toggle('open'); }
+</script>
+</body></html>
