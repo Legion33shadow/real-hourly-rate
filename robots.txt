@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://legion33shadow.github.io/real-hourly-rate/sitemap.xml
+Sitemap: https://Legion33shadow.github.io/real-hourly-rate/sitemap.xml
