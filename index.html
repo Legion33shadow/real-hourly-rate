@@ -1,464 +1,185 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Calculate your true hourly rate after commute, unpaid overtime, taxes and work expenses. Most people earn 30-50% less than they think. Updated 2026-04-28.">
-<meta name="keywords" content="real hourly rate calculator 2026, true hourly wage after expenses, actual hourly rate after commute, what do i really earn per hour, hidden cost of employment calculator">
-<meta property="og:title" content="Real Hourly Rate Calculator 2026 — What Do You Actually Earn?">
-<meta property="og:description" content="Calculate your true hourly rate after commute, unpaid overtime, taxes and work expenses. Most people earn 30-50% less than they think. Updated 2026-04-28.">
-<meta property="og:type" content="website">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Taux Horaire Reel 2026 — Combien gagnez-vous vraiment?</title>
+<meta name="description" content="Calculez votre vrai taux horaire apres deduction des couts lies au travail.">
 <meta name="robots" content="index,follow">
-<link rel="canonical" href="https://legion33shadow.github.io/real-hourly-rate/">
-<title>Real Hourly Rate Calculator 2026 — What Do You Actually Earn?</title>
+<meta property="og:title" content="Taux Horaire Reel 2026 — Combien gagnez-vous vraiment?">
+<meta property="og:description" content="Calculez votre vrai taux horaire apres deduction des couts lies au travail.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5382997898313669" crossorigin="anonymous"></script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Real Hourly Rate Calculator 2026", "url": "https://legion33shadow.github.io/real-hourly-rate/", "description": "Calculate your true hourly rate after all hidden costs: commute, unpaid overtime, work expenses, taxes. What do you actually earn per hour?", "applicationCategory": "FinanceApplication", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "inLanguage": "en", "dateModified": "2026-04-28"}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why is my real hourly rate lower than my salary suggests?", "acceptedAnswer": {"@type": "Answer", "text": "Your nominal salary is calculated on contracted hours. But most workers spend additional unpaid time: commuting (average 50 min/day), overtime, lunch breaks, getting ready for work. Add work expenses like transport, clothing, and takeout lunches — your real hourly rate can be 30-50% lower than you think."}}, {"@type": "Question", "name": "How do I calculate my real hourly rate?", "acceptedAnswer": {"@type": "Answer", "text": "Formula: Real hourly rate = (Annual net salary — Work expenses) ÷ (Contracted hours + Commute hours + Unpaid overtime + Work preparation time) × 52 weeks. This gives the actual value of one hour of your life spent on work."}}, {"@type": "Question", "name": "What counts as work-related expenses?", "acceptedAnswer": {"@type": "Answer", "text": "Transport (car, train, bus), work clothing and dry cleaning, lunches at work, coffee, childcare needed because of work, professional tools, subscriptions, and any equipment you buy for work that isn't reimbursed."}}, {"@type": "Question", "name": "How can I use my real hourly rate?", "acceptedAnswer": {"@type": "Answer", "text": "Use it to evaluate purchases: if something costs $200 and your real rate is $15/hour, that item cost you 13 hours of your life. Also use it to negotiate salary, evaluate freelance rates, or decide whether a promotion is worth the extra stress."}}]}</script>
 <style>
-:root{--p:#1d4ed8;--d:#1e40af;--bg:#f1f5f9;--card:#fff;
-      --t:#0f172a;--s:#64748b;--g:#16a34a;--r:#dc2626}
+:root{--bg:#06091a;--bg2:#0d1220;--card:#0f1929;--border:#1a2744;
+  --acc:#3b82f6;--acc2:#06b6d4;--green:#10b981;--red:#ef4444;
+  --yellow:#f59e0b;--pu:#8b5cf6;--tx:#f0f4ff;--mu:#7a90b8;--r:14px;
+  --shadow:0 8px 32px rgba(0,0,0,.5)}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;
-     background:var(--bg);color:var(--t);line-height:1.7}
-header{background:linear-gradient(135deg,#0f172a 0%,#1d4ed8 100%);
-       color:#fff;padding:2.2rem 1rem;text-align:center}
-header .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
-            opacity:.65;margin-bottom:.5rem}
-header h1{font-size:1.55rem;font-weight:800;line-height:1.3;margin-bottom:.4rem}
-header p{opacity:.88;font-size:.93rem;max-width:640px;margin:0 auto}
-nav.crumb{background:#fff;padding:.45rem 1rem;font-size:.78rem;
-          color:var(--s);border-bottom:1px solid #e2e8f0}
-nav.crumb a{color:var(--p);text-decoration:none}
-.container{max-width:800px;margin:0 auto;padding:1rem}
-.card{background:var(--card);border-radius:16px;padding:1.6rem;
-      box-shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
-      margin-bottom:1.4rem;border:1px solid #f1f5f9}
-.card h2{color:var(--p);font-size:1.1rem;font-weight:700;
-         margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
-.card h3{color:var(--d);font-size:.96rem;font-weight:600;
-         margin:1rem 0 .4rem}
-.card p{color:#475569;font-size:.91rem;margin-bottom:.65rem}
-.card ul{padding-left:1.15rem;color:#475569;font-size:.91rem}
-.card li{margin-bottom:.35rem}
-label{display:block;font-size:.81rem;color:var(--s);
-      font-weight:600;margin:.75rem 0 .25rem;letter-spacing:.01em}
-input,select{width:100%;padding:.72rem .85rem;border:1.5px solid #e2e8f0;
-             border-radius:10px;font-size:.96rem;background:#fff;
-             color:var(--t);transition:.2s}
-input:focus,select:focus{outline:none;border-color:var(--p);
-  box-shadow:0 0 0 3px rgba(29,78,216,.12)}
-input[readonly]{background:#f8fafc;color:var(--s);cursor:not-allowed}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:.9rem}
-.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.9rem}
-button.calc{width:100%;padding:.82rem;background:var(--p);color:#fff;
-            border:none;border-radius:10px;font-size:.97rem;font-weight:700;
-            cursor:pointer;margin-top:.9rem;letter-spacing:.02em;
-            transition:.2s;display:flex;align-items:center;justify-content:center;gap:.5rem}
-button.calc:hover{background:var(--d);transform:translateY(-1px);
-  box-shadow:0 4px 16px rgba(29,78,216,.28)}
-.result{background:linear-gradient(135deg,#eff6ff,#f0fdf4);
-        border:1.5px solid #bfdbfe;border-radius:12px;
-        padding:1.2rem;margin-top:1rem;display:none}
-.result.show{display:block}
-.result-hero{font-size:2.2rem;font-weight:800;color:var(--p);line-height:1}
-.result-sub{font-size:.78rem;color:var(--s);margin-top:.2rem}
-.result-grid{display:grid;grid-template-columns:1fr 1fr;gap:.6rem;margin-top:.9rem}
-.result-item{background:#fff;border-radius:8px;padding:.55rem .75rem;
-             border:1px solid #e2e8f0}
-.result-item .k{font-size:.74rem;color:var(--s)}
-.result-item .v{font-size:.97rem;font-weight:700;color:var(--t)}
-.result-item.good .v{color:var(--g)}
-.result-item.bad  .v{color:var(--r)}
-.result-item.warn .v{color:#d97706}
-.ads{text-align:center;margin:1.1rem 0}
-.tip{background:#f0fdf4;border-left:3px solid var(--g);border-radius:0 8px 8px 0;
-     padding:.75rem 1rem;margin:.7rem 0;font-size:.86rem;color:#166534}
-.warn{background:#fefce8;border-left:3px solid #ca8a04;border-radius:0 8px 8px 0;
-      padding:.75rem 1rem;margin:.7rem 0;font-size:.86rem;color:#92400e}
-.alert{background:#fef2f2;border-left:3px solid var(--r);
-       border-radius:0 8px 8px 0;padding:.75rem 1rem;
-       margin:.7rem 0;font-size:.86rem;color:#991b1b}
-.tbl{width:100%;border-collapse:collapse;font-size:.86rem;margin:.7rem 0}
-.tbl th{background:#dbeafe;color:var(--d);padding:.45rem .7rem;text-align:left;
-        font-weight:600}
-.tbl td{padding:.42rem .7rem;border-bottom:1px solid #f1f5f9;color:#334155}
-.tbl tr:last-child td{border-bottom:none}
-.tbl .g{color:var(--g);font-weight:600}
-.tbl .r{color:var(--r)}
-.tbl .b{color:var(--p);font-weight:700}
-.badge{background:#dbeafe;color:var(--d);padding:.12rem .45rem;
-       border-radius:5px;font-size:.73rem;font-weight:700;margin-left:.35rem}
-.badge.green{background:#dcfce7;color:#166534}
-.badge.orange{background:#fef3c7;color:#92400e}
-.pills{display:flex;flex-wrap:wrap;gap:.4rem;margin:.7rem 0}
-.pills a{background:#f1f5f9;color:var(--p);padding:.25rem .65rem;
-         border-radius:20px;font-size:.78rem;text-decoration:none;
-         border:1px solid #cbd5e1;transition:.15s}
-.pills a:hover{background:var(--p);color:#fff;border-color:var(--p)}
-.faq-item{border-bottom:1px solid #f1f5f9;padding:.75rem 0}
-.faq-item:last-child{border-bottom:none}
-.faq-q{font-weight:600;color:var(--t);cursor:pointer;font-size:.92rem;
-        display:flex;justify-content:space-between;align-items:center;gap:.5rem}
-.faq-q::after{content:"＋";color:var(--p);flex-shrink:0}
-.faq-item.open .faq-q::after{content:"－"}
-.faq-a{display:none;padding-top:.5rem;color:#475569;font-size:.88rem;line-height:1.65}
-.faq-item.open .faq-a{display:block}
-.disclaimer{background:#fefce8;border:1px solid #fde68a;border-radius:10px;padding:1rem}
-footer{text-align:center;padding:2rem 1rem;color:var(--s);font-size:.78rem;
-       border-top:1px solid #e2e8f0;margin-top:2rem}
-.progress-bar{height:8px;background:#e2e8f0;border-radius:4px;overflow:hidden;margin-top:.4rem}
-.progress-fill{height:100%;border-radius:4px;transition:width .5s}
-@media(max-width:540px){
-  .row2,.row3{grid-template-columns:1fr}
-  header h1{font-size:1.2rem}
-  .result-grid{grid-template-columns:1fr}
-}
+body{font-family:'Inter','Segoe UI',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;line-height:1.6}
+.hdr{background:rgba(6,9,26,.95);border-bottom:1px solid var(--border);padding:0 20px;
+  position:sticky;top:0;z-index:100;backdrop-filter:blur(12px)}
+.hdr-i{max-width:800px;margin:0 auto;display:flex;align-items:center;
+  justify-content:space-between;height:58px}
+.logo{font-size:1.1rem;font-weight:800;color:var(--tx);text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo em{color:var(--acc);font-style:normal}
+.hero{background:linear-gradient(160deg,#0a1628,#060e1f);padding:52px 20px 40px;
+  text-align:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 40% 40%,rgba(59,130,246,.07),transparent 60%);pointer-events:none}
+.hero h1{font-size:clamp(1.5rem,4vw,2.4rem);font-weight:800;
+  background:linear-gradient(135deg,#e0eaff,var(--acc2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px;position:relative}
+.hero p{color:var(--mu);font-size:.98rem;max-width:560px;margin:0 auto 18px;position:relative}
+.badges{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;position:relative}
+.badge{background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.25);
+  color:var(--acc2);border-radius:20px;padding:4px 13px;font-size:.75rem;font-weight:600}
+.wrap{max-width:800px;margin:28px auto;padding:0 18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--r);
+  padding:26px;margin-bottom:20px;box-shadow:var(--shadow)}
+.card-title{font-size:1rem;font-weight:700;color:var(--acc);margin-bottom:16px;
+  display:flex;align-items:center;gap:8px}
+.field{margin-bottom:13px}
+label{display:block;font-size:.82rem;font-weight:600;color:var(--mu);margin-bottom:5px}
+input[type=number],input[type=text],select{width:100%;padding:11px 14px;
+  background:var(--bg2);border:1.5px solid var(--border);border-radius:9px;
+  color:var(--tx);font-size:.96rem;outline:none;transition:border-color .2s}
+input:focus,select:focus{border-color:var(--acc)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--acc),var(--acc2));
+  color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;
+  cursor:pointer;transition:opacity .2s;margin-top:6px}
+.btn:hover{opacity:.88}
+#shock-zone{display:none;margin-top:20px;animation:popIn .45s cubic-bezier(.34,1.56,.64,1)}
+@keyframes popIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.shock-box{border-radius:14px;padding:22px;text-align:center;border:2px solid}
+.shock-red{background:rgba(239,68,68,.08);border-color:rgba(239,68,68,.3)}
+.shock-orange{background:rgba(245,158,11,.08);border-color:rgba(245,158,11,.3)}
+.shock-green{background:rgba(16,185,129,.08);border-color:rgba(16,185,129,.3)}
+.shock-value{font-size:2.8rem;font-weight:800;margin-bottom:6px}
+.shock-label{font-size:1rem;font-weight:600;margin-bottom:4px}
+.shock-sub{font-size:.85rem;opacity:.75}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-top:14px}
+.stat{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:13px;text-align:center}
+.stat .sv{font-size:1.2rem;font-weight:800;margin-bottom:4px}
+.stat .sl{font-size:.72rem;color:var(--mu)}
+.proj{background:linear-gradient(135deg,rgba(139,92,246,.07),rgba(59,130,246,.05));
+  border:1.5px solid rgba(139,92,246,.2);border-radius:12px;padding:18px;margin-top:14px}
+.proj-title{font-size:.82rem;font-weight:700;color:var(--pu);
+  margin-bottom:12px;text-transform:uppercase;letter-spacing:.05em}
+.proj-row{display:flex;justify-content:space-between;align-items:center;
+  padding:7px 0;border-bottom:1px solid rgba(255,255,255,.05);flex-wrap:wrap;gap:6px}
+.proj-row:last-child{border:none}
+.proj-year{font-size:.8rem;color:var(--mu);font-weight:600;min-width:50px}
+.proj-cost{font-size:.88rem;font-weight:700;color:var(--red)}
+.proj-gain{font-size:.88rem;font-weight:700;color:var(--green)}
+.proj-note{font-size:.72rem;color:var(--mu)}
+.actions{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.action{display:flex;align-items:flex-start;gap:12px;background:var(--bg2);
+  border:1.5px solid var(--border);border-radius:12px;padding:14px;
+  text-decoration:none;color:var(--tx);transition:all .2s;cursor:pointer}
+.action:hover{border-color:var(--acc);transform:translateX(3px)}
+.a-rank{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;
+  justify-content:center;font-size:.78rem;font-weight:800;flex-shrink:0}
+.r1{background:rgba(239,68,68,.15);color:var(--red);border:1.5px solid rgba(239,68,68,.3)}
+.r2{background:rgba(245,158,11,.15);color:var(--yellow);border:1.5px solid rgba(245,158,11,.3)}
+.r3{background:rgba(16,185,129,.15);color:var(--green);border:1.5px solid rgba(16,185,129,.3)}
+.a-body{flex:1}
+.a-title{font-weight:700;font-size:.9rem;margin-bottom:3px}
+.a-desc{font-size:.78rem;color:var(--mu);margin-bottom:4px}
+.a-gain{font-size:.78rem;font-weight:700;color:var(--green)}
+.a-arr{font-size:1rem;color:var(--mu);align-self:center;flex-shrink:0}
+.aff-section{margin-top:14px}
+.aff-title{font-size:.75rem;font-weight:700;color:var(--mu);
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
+.aff-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:8px}
+.aff-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;
+  padding:12px;text-decoration:none;color:var(--tx);transition:all .2s;
+  display:flex;flex-direction:column;gap:4px}
+.aff-card:hover{border-color:var(--acc);transform:translateY(-2px)}
+.aff-name{font-size:.83rem;font-weight:700}
+.aff-desc{font-size:.72rem;color:var(--mu)}
+.aff-tag{font-size:.68rem;font-weight:700;color:var(--green)}
+.capture{background:linear-gradient(135deg,rgba(16,185,129,.06),rgba(6,182,212,.04));
+  border:1.5px solid rgba(16,185,129,.18);border-radius:12px;padding:18px;margin-top:14px;text-align:center}
+.capture h3{font-size:.95rem;font-weight:700;margin-bottom:5px}
+.capture p{font-size:.8rem;color:var(--mu);margin-bottom:12px}
+.cap-row{display:flex;gap:8px;max-width:420px;margin:0 auto;flex-wrap:wrap}
+.cap-row input{flex:1;min-width:160px;padding:10px 12px;background:var(--bg);
+  border:1.5px solid var(--border);border-radius:8px;color:var(--tx);font-size:.88rem;outline:none}
+.cap-row button{padding:10px 16px;background:var(--green);color:#fff;border:none;
+  border-radius:8px;font-weight:700;cursor:pointer;font-size:.85rem;white-space:nowrap}
+.share-row{display:flex;gap:8px;margin-top:12px;justify-content:center;flex-wrap:wrap}
+.s-btn{padding:8px 14px;border-radius:8px;border:1.5px solid;font-size:.78rem;
+  font-weight:700;cursor:pointer;text-decoration:none;display:inline-flex;
+  align-items:center;gap:5px;transition:all .2s;background:transparent}
+.s-tw{border-color:rgba(29,161,242,.3);color:#1da1f2}
+.s-tw:hover{background:rgba(29,161,242,.1)}
+.s-rd{border-color:rgba(255,87,0,.3);color:#ff5700}
+.s-rd:hover{background:rgba(255,87,0,.1)}
+.s-cp{border-color:var(--border);color:var(--mu)}
+.s-cp:hover{border-color:var(--acc);color:var(--acc)}
+.s-pdf{border-color:rgba(139,92,246,.3);color:var(--pu)}
+.s-pdf:hover{background:rgba(139,92,246,.1)}
+.tunnel{margin-top:18px}
+.tunnel-title{font-size:.75rem;font-weight:700;color:var(--mu);
+  text-transform:uppercase;letter-spacing:.06em;margin-bottom:9px}
+.tunnel-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:9px}
+.t-card{background:var(--card);border:1px solid var(--border);border-radius:11px;
+  padding:13px;text-decoration:none;color:var(--tx);transition:all .2s;
+  display:flex;flex-direction:column;gap:4px}
+.t-card:hover{border-color:var(--acc2);transform:translateY(-2px)}
+.t-ico{font-size:1.2rem}
+.t-name{font-size:.83rem;font-weight:700}
+.t-hook{font-size:.72rem;color:var(--mu)}
+.ad{max-width:800px;margin:0 auto;padding:8px 18px;text-align:center;min-height:80px}
+footer{border-top:1px solid var(--border);padding:20px;text-align:center;
+  color:var(--mu);font-size:.78rem;margin-top:24px}
+footer a{color:var(--acc);text-decoration:none}
+@media(max-width:560px){.grid2{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}
+  .cap-row{flex-direction:column}}
+@media print{.hdr,.ad,.capture,.share-row,.tunnel,.btn,.aff-section{display:none!important}
+  body{background:#fff;color:#000}.shock-box{border:1px solid #ccc}
+  .shock-value{color:#000!important;-webkit-text-fill-color:#000!important}}
 </style>
 </head>
 <body>
-<header>
-  <div class="tag">🌍 Global · Updated 2026</div>
-  <h1>⏱️ Real Hourly Rate Calculator</h1>
-  <p>What do you <em>actually</em> earn per hour — after commute,
-  unpaid overtime, taxes and hidden work costs?
-  Most people are shocked by the result.</p>
-</header>
-<nav class="crumb"><a href="./">Home</a> › Real Hourly Rate Calculator</nav>
-
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-
-<div class="container">
-
-<!-- ── MAIN TOOL ─────────────────────────────────────────── -->
-<div class="card" id="real-rate-calc">
-  <h2>⏱️ True Hourly Rate Calculator
-    <span class="badge">Revealing</span></h2>
-
-  <div class="warn" style="margin-bottom:1rem">
-    🧠 <strong>Most people overestimate their hourly rate by 40%.</strong>
-    Fill in your real situation below.
-  </div>
-
-  <h3>💰 Income</h3>
-  <div class="row2">
-    <div>
-      <label>Annual gross salary</label>
-      <input type="number" id="rh_gross" placeholder="50000" min="0"
-             oninput="estimateTax()">
-    </div>
-    <div>
-      <label>Annual net salary (after tax)</label>
-      <input type="number" id="rh_net" placeholder="38000" min="0">
-    </div>
-  </div>
-  <div style="font-size:.78rem;color:var(--s);margin-top:.2rem" id="rh_tax_hint"></div>
-
-  <h3 style="margin-top:1rem">⏰ Time Invested</h3>
-  <div class="row2">
-    <div>
-      <label>Contracted hours per week</label>
-      <input type="number" id="rh_contract" value="40" min="1" max="80">
-    </div>
-    <div>
-      <label>Actual hours worked per week (incl. overtime)</label>
-      <input type="number" id="rh_actual" value="45" min="1" max="100">
-    </div>
-  </div>
-  <div class="row2">
-    <div>
-      <label>Daily commute (minutes one way)</label>
-      <input type="number" id="rh_commute" value="30" min="0" max="180">
-    </div>
-    <div>
-      <label>Daily work prep time (getting ready, etc.)</label>
-      <input type="number" id="rh_prep" value="20" min="0" max="120">
-    </div>
-  </div>
-
-  <h3 style="margin-top:1rem">💸 Annual Work Expenses</h3>
-  <div class="row2">
-    <div>
-      <label>Transport / commute cost / year</label>
-      <input type="number" id="rh_transport" placeholder="1200" min="0" value="0">
-    </div>
-    <div>
-      <label>Work lunches / year</label>
-      <input type="number" id="rh_lunch" placeholder="800" min="0" value="0">
-    </div>
-  </div>
-  <div class="row2">
-    <div>
-      <label>Work clothing / year</label>
-      <input type="number" id="rh_clothing" placeholder="300" min="0" value="0">
-    </div>
-    <div>
-      <label>Other work expenses / year</label>
-      <input type="number" id="rh_other" placeholder="200" min="0" value="0">
-    </div>
-  </div>
-
-  <button class="calc" onclick="calcRealHourly()">
-    ▶ Reveal my real hourly rate
-  </button>
-
-  <div class="result" id="res_rh">
-    <div class="row2">
-      <div>
-        <div style="font-size:.78rem;color:var(--s)">Your NOMINAL rate</div>
-        <div style="font-size:1.5rem;font-weight:700;color:var(--s);
-                    text-decoration:line-through" id="rh_nominal">€ —</div>
-      </div>
-      <div>
-        <div style="font-size:.78rem;color:var(--p)">Your REAL rate</div>
-        <div class="result-hero" id="rh_real">€ —</div>
-      </div>
-    </div>
-    <div class="result-grid" id="rh_grid" style="margin-top:1rem"></div>
-    <div id="rh_insight" style="margin-top:.9rem"></div>
-  </div>
+<header class="hdr"><div class="hdr-i"><a href="#" class="logo">&#x1F4B0; <em>Decision</em>Tools</a></div></header>
+<div class="hero"><h1>&#x23F1;&#xFE0F; Votre Vrai Taux Horaire</h1><p>Votre salaire de 2500€/mois cache souvent un vrai taux de 8-11€/h apres deductions.</p><div class="badges"><span class="badge">&#x2705; Gratuit</span><span class="badge">&#x1F512; Prive</span><span class="badge">2026</span></div></div>
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});<\/script></div>
+<div class="wrap">
+<div class="card"><div class="card-title">Calculez votre vrai taux</div><div class="grid2"><div class="field"><label>Salaire net mensuel (€)</label><input id="sal" type="number" value="2500" min="0"></div><div class="field"><label>Heures travaillees / semaine</label><input id="hrs" type="number" value="40" min="1"></div></div><div class="grid2"><div class="field"><label>Transport / mois (€)</label><input id="tr" type="number" value="120" min="0"></div><div class="field"><label>Repas au travail / mois (€)</label><input id="rp" type="number" value="80" min="0"></div><div class="field"><label>Vetements pro / mois (€)</label><input id="vet" type="number" value="30" min="0"></div><div class="field"><label>Autres couts / mois (€)</label><input id="aut" type="number" value="20" min="0"></div></div><button class="btn" onclick="calcRHR()">Calculer mon vrai taux &#8594;</button></div><div id="shock-zone"><div id="shock-box" class="shock-box shock-red"><div class="shock-value" id="sv_rhr">0</div><div class="shock-label">Vrai taux horaire reel</div><div class="shock-sub" id="ss_rhr"></div></div></div><div class="stats"><div class="stat"><div class="sv" id="st_app" style="color:#3b82f6">-</div><div class="sl">Taux apparent</div></div><div class="stat"><div class="sv" id="st_real" style="color:#ef4444">-</div><div class="sl">Taux reel</div></div><div class="stat"><div class="sv" id="st_cost" style="color:#f59e0b">-</div><div class="sl">Couts du travail</div></div><div class="stat"><div class="sv" id="st_pct" style="color:#8b5cf6">-</div><div class="sl">Perte nette</div></div></div><div class="card" style="margin-top:14px"><div class="card-title">3 actions par impact</div><div class="actions"><a href="https://www.linkedin.com" class="action" target="_blank" rel="nofollow"><div class="a-rank r1">1</div><div class="a-body"><div class="a-title">Negocier avec ces chiffres comme levier</div><div class="a-desc">Montrez votre vrai taux horaire a votre employeur. Script inclus ci-dessous.</div><div class="a-gain">Impact: +200-800€/mois si reussi</div></div><div class="a-arr">&#8594;</div></a><a href="https://www.malt.fr" class="action" target="_blank" rel="nofollow"><div class="a-rank r2">2</div><div class="a-body"><div class="a-title">Passer en freelance / auto-entrepreneur</div><div class="a-desc">TJM 350€ = ~10x votre taux horaire reel actuel.</div><div class="a-gain">Gain potentiel: 2-5x revenu actuel</div></div><div class="a-arr">&#8594;</div></a><a href="" class="action" target="_blank" rel="nofollow"><div class="a-rank r3">3</div><div class="a-body"><div class="a-title">Reduire les couts lies au travail</div><div class="a-desc">Covoiturage + teletravail + repas maison = +100-300€/mois nets.</div><div class="a-gain">Economie immediate: 100-300€/mois</div></div><div class="a-arr">&#8594;</div></a></div></div><div class="aff-section"><div class="aff-title">Solutions recommandees</div><div class="aff-grid"><a href="https://www.malt.fr" target="_blank" rel="nofollow" class="aff-card"><div class="aff-name">Malt</div><div class="aff-desc">Missions freelance mieux payees</div><div class="aff-tag">Freelance</div></a><a href="https://www.linkedin.com" target="_blank" rel="nofollow" class="aff-card"><div class="aff-name">LinkedIn</div><div class="aff-desc">Negocier une augmentation</div><div class="aff-tag">Carriere</div></a><a href="https://toggl.com" target="_blank" rel="nofollow" class="aff-card"><div class="aff-name">Toggl</div><div class="aff-desc">Tracker vos vraies heures</div><div class="aff-tag">Gratuit</div></a><a href="https://www.hellowork.com" target="_blank" rel="nofollow" class="aff-card"><div class="aff-name">HelloWork</div><div class="aff-desc">Comparer les salaires</div><div class="aff-tag">Stats</div></a></div></div><div class="capture"><h3>&#128231; Alertes gratuites</h3><p>Guide gratuit: script de negociation d augmentation base sur votre vrai taux horaire.</p><form action="https://formspree.io/f/xpwzwqzq" method="POST"><div class="cap-row"><input type="email" name="email" placeholder="votre@email.com" required><input type="hidden" name="_subject" value="rhr-alert"><button type="submit">Recevoir &#8594;</button></div></form></div><div class="share-row"><button class="s-btn s-tw" onclick="shareTwitter('Mon salaire apparent: 14€/h. Mon vrai taux apres deductions: 9€/h. Ce calculateur m a ouvert les yeux.')">&#x1F4AC; Twitter</button><button class="s-btn s-rd" onclick="shareReddit('Real hourly rate calculator — my result shocked me','personalfinance')">&#x1F534; Reddit</button><button class="s-btn s-cp" onclick="copyLink()">&#x1F517; Copier</button><button class="s-btn s-pdf" onclick="exportPDF()">&#x1F5A8; PDF</button></div><div class="tunnel"><div class="tunnel-title">Etape suivante</div><div class="tunnel-grid"><a href="https://Legion33shadow.github.io/true-car-cost-calculator/" class="t-card"><div class="t-ico">&#x1F697;</div><div class="t-name">Cout Voiture</div><div class="t-hook">Heures travaillees pour votre auto?</div></a><a href="https://Legion33shadow.github.io/subscription-cost-auditor/" class="t-card"><div class="t-ico">&#x1F4B8;</div><div class="t-name">Audit Abos</div><div class="t-hook">Combien d heures pour vos abos?</div></a><a href="https://Legion33shadow.github.io/poland-b2b-vs-uop/" class="t-card"><div class="t-ico">&#x1F1F5;&#x1F1F1;</div><div class="t-name">B2B vs Salariat PL</div><div class="t-hook">Meilleur statut fiscal</div></a><a href="https://Legion33shadow.github.io/greece-freelance-efka/" class="t-card"><div class="t-ico">&#x1F1EC;&#x1F1F7;</div><div class="t-name">EFKA Grece</div><div class="t-hook">Freelance en Grece</div></a></div></div>
 </div>
-
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-
-<!-- ── LIFE COST TOOL ─────────────────────────────────────── -->
-<div class="card" id="life-cost">
-  <h2>🛒 True Cost of a Purchase
-    <span class="badge">Mind-blowing</span></h2>
-  <p style="font-size:.88rem;color:#475569">
-    How many hours of your life does a purchase actually cost?
-  </p>
-  <div class="row2">
-    <div>
-      <label>Item price</label>
-      <input type="number" id="lc_price" placeholder="500" min="0">
-    </div>
-    <div>
-      <label>Your real hourly rate (auto-filled)</label>
-      <input type="number" id="lc_rate" placeholder="15.50" min="0" step="0.01">
-    </div>
-  </div>
-  <button class="calc" onclick="calcLifeCost()">▶ Calculate life cost</button>
-  <div class="result" id="res_lc">
-    <div class="result-hero" id="lc_hours">— hours</div>
-    <div class="result-sub">of your life to buy this item</div>
-    <div class="result-grid" id="lc_grid" style="margin-top:.9rem"></div>
-    <div id="lc_context" style="margin-top:.8rem"></div>
-  </div>
-</div>
-
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-
-<!-- ── SEO CONTENT ────────────────────────────────────────── -->
-<div class="card">
-  <h2>📘 Why Your Real Hourly Rate Matters</h2>
-
-  <p>Most salary discussions focus on the <strong>nominal hourly rate</strong>
-  — your annual salary divided by contracted hours. But this number
-  is almost always a <em>fiction</em>.</p>
-
-  <h3>The Hidden Time Tax</h3>
-  <p>A typical office worker in Europe or North America adds
-  significant unpaid time to their work week:</p>
-
-  <table class="tbl">
-    <tr><th>Hidden Time</th><th>Typical Duration</th><th>Weekly Total</th></tr>
-    <tr><td>Commute (both ways)</td><td>50 min/day</td><td class="r">4.2 h</td></tr>
-    <tr><td>Unpaid overtime</td><td>5-10 h/week</td><td class="r">7.5 h</td></tr>
-    <tr><td>Getting ready</td><td>20 min/day</td><td class="r">1.7 h</td></tr>
-    <tr><td>Decompression time</td><td>30 min/day</td><td class="r">2.5 h</td></tr>
-    <tr><td><strong>Total hidden</strong></td><td></td>
-        <td class="b"><strong>~16 hours/week</strong></td></tr>
-  </table>
-
-  <p style="margin-top:.8rem">That means a "40-hour job" can easily
-  consume <strong>56 hours of your life per week</strong>.
-  Your real hourly rate is therefore 28% lower — before expenses.</p>
-
-  <h3>The Hidden Cost Tax</h3>
-  <p>Work creates costs that wouldn't exist without the job:</p>
-  <ul>
-    <li><strong>Transport:</strong> car payments, fuel, train tickets</li>
-    <li><strong>Food:</strong> lunches, coffees, convenience meals
-    because you're too tired to cook</li>
-    <li><strong>Clothing:</strong> work wardrobe, dry cleaning</li>
-    <li><strong>Childcare:</strong> needed specifically for work hours</li>
-    <li><strong>Stress relief:</strong> gym, subscriptions,
-    weekend escapes to recover</li>
-  </ul>
-
-  <div class="alert">
-    🔥 <strong>Real-world example:</strong> €50.000 gross salary →
-    €36.000 net → minus €4.800 work expenses = €31.200.
-    Contracted 40h/week, but real work-related time = 55h.
-    <strong>Real rate: €31.200 ÷ (55 × 52) = €10.91/hour.</strong>
-    Nominal rate was €24.04. That's a <strong>55% overestimate.</strong>
-  </div>
-
-  <h3>How to Use This Insight</h3>
-  <ul>
-    <li>Evaluate whether a salary raise is really worth the extra stress</li>
-    <li>Calculate if a part-time option is financially viable</li>
-    <li>Set freelance rates that actually pay you fairly</li>
-    <li>Make intentional spending decisions ("this costs me 8 hours of life")</li>
-  </ul>
-</div>
-
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-
-<div class="card">
-  <h2>❓ Frequently Asked Questions</h2>
-  <div class="faq-item"><div class="faq-q" onclick="fq(this)">Why is my real hourly rate lower than my salary suggests?</div><div class="faq-a">Your nominal salary is calculated on contracted hours. But most workers spend additional unpaid time: commuting (average 50 min/day), overtime, lunch breaks, getting ready for work. Add work expenses like transport, clothing, and takeout lunches — your real hourly rate can be 30-50% lower than you think.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="fq(this)">How do I calculate my real hourly rate?</div><div class="faq-a">Formula: Real hourly rate = (Annual net salary — Work expenses) ÷ (Contracted hours + Commute hours + Unpaid overtime + Work preparation time) × 52 weeks. This gives the actual value of one hour of your life spent on work.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="fq(this)">What counts as work-related expenses?</div><div class="faq-a">Transport (car, train, bus), work clothing and dry cleaning, lunches at work, coffee, childcare needed because of work, professional tools, subscriptions, and any equipment you buy for work that isn't reimbursed.</div></div>
-<div class="faq-item"><div class="faq-q" onclick="fq(this)">How can I use my real hourly rate?</div><div class="faq-a">Use it to evaluate purchases: if something costs $200 and your real rate is $15/hour, that item cost you 13 hours of your life. Also use it to negotiate salary, evaluate freelance rates, or decide whether a promotion is worth the extra stress.</div></div>
-
-</div>
-
-<div class="card">
-  <h2>🔗 Related Calculators</h2>
-  <div class="pills">
-    <a href="#real-rate-calc">⏱️ Real Hourly Rate</a>
-    <a href="#life-cost">🛒 Life Cost</a>
-    <a href="../tax-calculator-nl/">🇳🇱 NL Tax</a>
-    <a href="../tax-calculator-no/">🇳🇴 NO Tax</a>
-    <a href="../tax-calculator-se/">🇸🇪 SE Tax</a>
-  </div>
-</div>
-
-<div class="card disclaimer">
-  <h2 style="color:#92400e">📌 Disclaimer</h2>
-  <p style="color:#78350f;font-size:.86rem">
-    This calculator provides estimates based on your inputs.
-    Tax estimates use simplified brackets and may vary by country
-    and individual circumstances. Last updated: 2026-04-28.
-  </p>
-</div>
-</div>
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-
-<footer>
-  <p>© 2026 Real Hourly Rate Calculator · Free financial tool</p>
-  <p style="margin-top:.3rem">
-    <a href="#real-rate-calc" style="color:var(--p);font-size:.78rem">
-    Real Rate</a> ·
-    <a href="#life-cost" style="color:var(--p);font-size:.78rem">
-    Life Cost</a>
-  </p>
-</footer>
-
+<div class="ad"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});<\/script></div>
+<footer><p>&#169; 2026 DecisionTools &mdash; <a href="privacy.html">Privacy</a> &middot; Calculs indicatifs uniquement.</p></footer>
 <script>
-function estimateTax() {
-  var g = parseFloat(document.getElementById('rh_gross').value) || 0;
-  if (g > 0) {
-    var est = Math.round(g * 0.28); // rough ~28% effective for EU average
-    var net = g - est;
-    document.getElementById('rh_net').value = net;
-    document.getElementById('rh_tax_hint').textContent =
-      'Auto-estimated net: ' + net.toLocaleString() +
-      ' (adjust if you know your actual net salary)';
+
+function showProj(mo){
+  if(!mo||mo<=0){document.getElementById('proj').style.display='none';return;}
+  var rows=[3,5,10]; var html='';
+  for(var i=0;i<rows.length;i++){
+    var y=rows[i];
+    var cost=Math.round(mo*12*y);
+    var gain=Math.round(cost*Math.pow(1.07,y));
+    var delta=Math.round(gain-cost);
+    html+='<div class="proj-row">'
+      +'<span class="proj-year">'+y+' ans</span>'
+      +'<span class="proj-cost">-'+cost.toLocaleString()+'</span>'
+      +'<span class="proj-gain">+'+gain.toLocaleString()+' si investi</span>'
+      +'<span class="proj-note">(+'+delta.toLocaleString()+'  interets)</span>'
+      +'</div>';
   }
+  document.getElementById('proj-body').innerHTML=html;
+  document.getElementById('proj').style.display='block';
 }
-
-function calcRealHourly() {
-  var gross    = parseFloat(document.getElementById('rh_gross').value) || 0;
-  var net      = parseFloat(document.getElementById('rh_net').value)   || gross * 0.72;
-  var contract = parseFloat(document.getElementById('rh_contract').value) || 40;
-  var actual   = parseFloat(document.getElementById('rh_actual').value)   || 40;
-  var commute  = parseFloat(document.getElementById('rh_commute').value)  || 0;
-  var prep     = parseFloat(document.getElementById('rh_prep').value)     || 0;
-  var transport= parseFloat(document.getElementById('rh_transport').value)|| 0;
-  var lunch    = parseFloat(document.getElementById('rh_lunch').value)    || 0;
-  var clothing = parseFloat(document.getElementById('rh_clothing').value) || 0;
-  var other    = parseFloat(document.getElementById('rh_other').value)    || 0;
-
-  var totalExpenses = transport + lunch + clothing + other;
-  var realIncome    = net - totalExpenses;
-
-  // Weekly hours: actual work + commute×2×5days/60 + prep×5/60
-  var commuteWeekly = (commute * 2 * 5) / 60;
-  var prepWeekly    = (prep * 5) / 60;
-  var totalWeekly   = actual + commuteWeekly + prepWeekly;
-  var totalAnnualH  = totalWeekly * 52;
-
-  var nominalRate = net / (contract * 52);
-  var realRate    = realIncome / totalAnnualH;
-  var drop        = Math.round((1 - realRate / nominalRate) * 100);
-
-  var f2 = function(v) { return '€ ' + v.toFixed(2); };
-  var f0 = function(v) { return '€ ' + Math.round(v).toLocaleString(); };
-
-  document.getElementById('rh_nominal').textContent = f2(nominalRate) + '/hr';
-  document.getElementById('rh_real').textContent    = f2(realRate) + '/hr';
-
-  document.getElementById('rh_grid').innerHTML = [
-    ['Net income', f0(net), ''],
-    ['Work expenses/yr', f0(totalExpenses), 'bad'],
-    ['Real income', f0(realIncome), 'good'],
-    ['Contracted hrs/yr', Math.round(contract * 52) + ' h', ''],
-    ['Real time/yr', Math.round(totalAnnualH) + ' h', 'bad'],
-    ['Rate drop vs nominal', drop + '%', 'bad'],
-  ].map(function(r) {
-    return '<div class="result-item ' + r[2] + '">'
-      + '<div class="k">' + r[0] + '</div>'
-      + '<div class="v">' + r[1] + '</div></div>';
-  }).join('');
-
-  var insight = '';
-  if (drop > 40) {
-    insight = '<div class="alert">🔥 <strong>Your real rate is '
-      + drop + '% lower than nominal.</strong> '
-      + 'A major discrepancy — consider negotiating, reducing expenses, '
-      + 'or evaluating remote work options.</div>';
-  } else if (drop > 20) {
-    insight = '<div class="warn">⚠️ Your real rate is <strong>' + drop
-      + '% below nominal</strong>. Common for urban workers. '
-      + 'Reducing commute time would have the biggest impact.</div>';
-  } else {
-    insight = '<div class="tip">✅ Your real rate is relatively close '
-      + 'to nominal (' + drop + '% gap). You have an efficient work setup.</div>';
-  }
-  document.getElementById('rh_insight').innerHTML = insight;
-  document.getElementById('res_rh').className = 'result show';
-
-  // Pre-fill life cost tool
-  document.getElementById('lc_rate').value = realRate.toFixed(2);
+function shareTwitter(txt){
+  window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(txt+' '+location.href),'_blank');
 }
-
-function calcLifeCost() {
-  var price = parseFloat(document.getElementById('lc_price').value) || 0;
-  var rate  = parseFloat(document.getElementById('lc_rate').value)  || 1;
-  var hours = price / rate;
-  var days  = hours / 8;
-  var weeks = hours / 40;
-
-  document.getElementById('lc_hours').textContent =
-    hours.toFixed(1) + ' hours';
-  document.getElementById('lc_grid').innerHTML = [
-    ['Price', '€ ' + price.toLocaleString(), ''],
-    ['Your real rate', '€ ' + rate.toFixed(2) + '/hr', ''],
-    ['= Work hours', hours.toFixed(1) + ' h', 'bad'],
-    ['= Work days', days.toFixed(1) + ' days', 'bad'],
-  ].map(function(r) {
-    return '<div class="result-item ' + r[2] + '">'
-      + '<div class="k">' + r[0] + '</div>'
-      + '<div class="v">' + r[1] + '</div></div>';
-  }).join('');
-
-  var ctx = '';
-  if (hours < 1) {
-    ctx = '<div class="tip">✅ Costs less than 1 hour. Reasonable.</div>';
-  } else if (hours < 8) {
-    ctx = '<div class="tip">⏰ About ' + hours.toFixed(1)
-      + ' hours of work. Think if it is worth it.</div>';
-  } else {
-    ctx = '<div class="alert">🔥 This costs you <strong>'
-      + days.toFixed(1) + ' full work days</strong>. '
-      + 'Consider carefully.</div>';
-  }
-  document.getElementById('lc_context').innerHTML = ctx;
-  document.getElementById('res_lc').className = 'result show';
+function shareReddit(title, sub){
+  var u='https://www.reddit.com/r/'+sub+'/submit?title='+encodeURIComponent(title)+'&url='+encodeURIComponent(location.href);
+  window.open(u,'_blank');
 }
+function copyLink(){navigator.clipboard.writeText(location.href).then(function(){alert('Lien copie!');});}
+function exportPDF(){window.print();}
 
-function fq(el) { el.parentElement.classList.toggle('open'); }
+function calcRHR(){var sal=+document.getElementById('sal').value||0;var hrs=+document.getElementById('hrs').value||40;var costs=(+document.getElementById('tr').value||0)+(+document.getElementById('rp').value||0)+(+document.getElementById('vet').value||0)+(+document.getElementById('aut').value||0);var netSal=sal-costs;var hmo=hrs*4.33;var app=sal/hmo; var real=netSal/hmo;var loss=(app-real)/app*100;document.getElementById('sv_rhr').textContent=real.toFixed(2)+'€/h';document.getElementById('ss_rhr').textContent=real<8?'Salaire tres bas':real<12?'Salaire sous-evalue':'Taux correct';var bx=document.getElementById('shock-box');bx.className='shock-box '+(real<8?'shock-red':real<12?'shock-orange':'shock-green');document.getElementById('st_app').textContent=app.toFixed(2)+'€/h';document.getElementById('st_real').textContent=real.toFixed(2)+'€/h';document.getElementById('st_cost').textContent=Math.round(costs)+'€/mo';document.getElementById('st_pct').textContent=loss.toFixed(0)+'%';document.getElementById('shock-zone').style.display='block';}
 </script>
 </body></html>
